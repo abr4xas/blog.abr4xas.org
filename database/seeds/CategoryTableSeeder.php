@@ -17,7 +17,7 @@ class CategoryTableSeeder extends Seeder
             'laravel',
             'vue',
             'linux',
-            'other'
+            'uncategorized'
         ];
         
         foreach ($categories as $key) {

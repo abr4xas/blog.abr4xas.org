@@ -79,6 +79,24 @@
     <link rel="stylesheet" href="{{ asset('/css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/owl.theme.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
+    @if(env('APP_ENV') === 'production')
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105837438-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-105837438-1');
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-4420243297477826",
+            enable_page_level_ads: true
+        });
+
+    </script>
+    @endif
 </head>
 
 @stack('body')
