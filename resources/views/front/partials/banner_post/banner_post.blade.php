@@ -57,8 +57,8 @@
                 <div class="banner-wrapper">
                         <a href="{{ url('/category/uncategorized') }}" title="sin categoría">
                         <div class="banner-wrapper-content">
-                            <h1 class="h2">sin categoría</h1>
-                            <span class="category-tag category-tag-white">sin categoría</span>
+                            <h1 class="h2">Sin Categoría</h1>
+                            <span class="category-tag category-tag-white">uncategorized</span>
                             {{-- <time datetime="2016-01-18" class="">January 18, 2016</time> --}}
                         </div>
                     </a>

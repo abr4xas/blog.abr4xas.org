@@ -216,6 +216,7 @@
 <script type="text/javascript" src="{{ asset('/js/owl.carousel.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/js/webfont.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/js/scripts.js') }}"></script>
+@stack('scripts')
 </body>
 
 </html>

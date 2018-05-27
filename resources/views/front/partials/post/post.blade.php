@@ -157,17 +157,32 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="comments">
-
+                                <div id="disqus_thread"></div>
+                                <noscript>
+                                    Please enable JavaScript to view the
+                                    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                                </noscript>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-
         </div>
-        <!-- end ARTICLE BOTTOM INFO -->
-
-
     </main>
 @endsection
+
+@push('scripts')
+<script>
+	var disqus_config = function () {
+		this.page.url = "{{ route('posts.show', $post->slug) }}";  // Replace PAGE_URL with your page's canonical URL variable
+		this.page.identifier = "{{ $post->slug }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+	};
+
+	(function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://elblogdeabr4xas.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+@endpush
