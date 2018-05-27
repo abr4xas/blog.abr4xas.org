@@ -13,6 +13,7 @@ Home
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-xs-12">
+                @if (count($posts) > 0)
                 <section class="articles">
                     @foreach ($posts as $post)
                         @include('front.partials.front_post.front_post')
@@ -20,6 +21,11 @@ Home
                 </section>
                 <br>
                 {{ $posts->links() }}
+                    
+                @else
+                    <h2>Aun no hay contenido...</h2>
+                    <img src="{{ asset('/img/nope/ntdh.gif') }}" class="img-fluid" alt="Nothing Todo Here">
+                @endif
             </div>
             <div class="aside-blocks col-lg-4 col-xs-12">
                 {{-- @include('front.partials.author.author')  --}}

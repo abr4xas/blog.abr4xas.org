@@ -1,6 +1,6 @@
 <aside class="categories">
     <h2 class="aside-title">Categories</h2>
-    <ul>
+    <ul class="text-uppercase">
 
         @foreach ($categories as $item)
 

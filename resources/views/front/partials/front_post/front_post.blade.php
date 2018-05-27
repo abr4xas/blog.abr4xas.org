@@ -4,7 +4,7 @@
             {{ $post->created_at->diffForHumans() }}
         </time>
         <span class="articles-header-category">
-            <a title="Ver más post sobre {{ $post->category->name }}" href="{{ route('category.show', $post->category->name) }}" class="grey">
+            <a title="Ver más post sobre {{ $post->category->name }}" href="{{ route('category.show', $post->category->name) }}" class="grey text-uppercase">
                 {{ $post->category->name }}
             </a>
         </span>
