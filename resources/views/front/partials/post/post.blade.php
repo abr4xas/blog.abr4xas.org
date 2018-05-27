@@ -35,6 +35,8 @@
                                 <div class="articles-content-block">
                                     <img src="{{ $post->image }}" alt="{{ $post->title }}" class="img-fluid">
                                     <br> @markdown($post->content)
+                                    <br>
+                                    @include('front.partials.adsense.adsense')
                                 </div>
                             </div>
                         </div>
@@ -67,7 +69,7 @@
             <section class="articles-info-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-10 col-xs-12">
+                        <div class="col-lg-12 col-xs-12">
                             {{-- <div class="articles-footer">
                                 <ul class="articles-footer-info">
                                     <li>
