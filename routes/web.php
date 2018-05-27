@@ -31,6 +31,6 @@ Route::get('{post}', [
 ]);
 
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['prefix' => 'auth'], function () {
+    Auth::routes();
+});
