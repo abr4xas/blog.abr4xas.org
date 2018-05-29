@@ -98,6 +98,7 @@
 
     </script>
     @endif
+    <style>.articles img {margin: 0 auto;max-width:100%;height:auto;display:block;}</style>
 </head>
 
 @stack('body')
