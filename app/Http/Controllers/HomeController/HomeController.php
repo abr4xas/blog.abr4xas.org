@@ -42,7 +42,7 @@ class HomeController extends Controller
     {
         $posts = Posts::latest()->get();
 
-        return response()->view('front.partials.sitemap', [
+        return response()->view('front.partials.sitemap.sitemap', [
             'posts' => $posts,
         ])->header('Content-Type', 'text/xml');
     }

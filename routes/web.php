@@ -30,6 +30,7 @@ Route::get('{post}', [
 
 Route::get('/feeds/all.atom.xml', 'HomeController\HomeController@feed');
 Route::get('/feeds/json', 'HomeController\HomeController@jsonPost')->name('json.feed');
+Route::get('/p/sitemap', 'HomeController\HomeController@sitemap');
 
 Route::group(['prefix' => 'auth'], function () {
     Auth::routes();
