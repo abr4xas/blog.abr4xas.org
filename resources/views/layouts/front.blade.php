@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>@stack('title')</title>
     <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="dns-prefetch" href="{{ route('main') }}" />
     <link rel="dns-prefetch" href="//www.gstatic.com" />
     <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -14,6 +13,7 @@
     <link rel="publisher" href="https://plus.google.com/+elblogdeabr4xas">
     <link rel="apple-touch-startup-image" href="{{ asset('/img/logo/logo.png') }}">
     <link rel="socialmedia" type="text/plain" href="{{ asset('/socialmedia.txt') }}">
+    <link rel="alternate" hreflang="{{ app()->getLocale() }}" href="{{ route('main') }}" /> 
     <meta http-equiv="imagetoolbar" content="no">
     <meta http-equiv="pragma" content="cache">
     <meta http-equiv="cache-control" content="cache">
@@ -38,7 +38,7 @@
     <meta name="google" content="notranslate">
     <meta property="og:locale" content="{{ app()->getLocale() }}">
     <meta name="twitter:creator" content="@abr4xas">
-    <link rel="alternate" hreflang="{{ app()->getLocale() }}" href="{{ route('main') }}" /> @stack('meta')
+@stack('meta')
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="El Blog de Abr4xas" />
@@ -68,16 +68,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/favicon.png') }}">
     <link rel="manifest" href="{{ asset('/manifest.json') }}">
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://feeds.feedburner.com/ElBlogDeAbr4xas" />
-    {{-- <link rel="alternate" title="El Blog de Abr4xas News Feed" type="application/json" href="{{ route('json.feed') }}" /> --}}
+    <link rel="alternate" title="El Blog de Abr4xas News Feed" type="application/json" href="{{ route('json.feed') }}" />
     <link rel="shortcut icon" href="{{ asset('/favicon.ico') }}">
     <link rel="shortcut icon" href="{{ asset('/favicon.png') }}">
-
     <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/Pe-icon-7-stroke.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/social-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/owl.carousel.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/owl.theme.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('/css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/owl.theme.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
     @if(env('APP_ENV') === 'production')
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

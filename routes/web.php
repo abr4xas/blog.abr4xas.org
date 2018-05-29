@@ -22,14 +22,14 @@ Route::get('/category/{category}', [
     'uses' => 'HomeController\CategoryController@show'
 ])->name('category.show');
 
-
-
 Route::get('{post}', [
     'only'  => ['show'],
     'as'    => 'posts.show',
     'uses'  => 'HomeController\HomeController@show'
 ]);
 
+Route::get('/feeds/all.atom.xml', 'HomeController\HomeController@feed');
+Route::get('/feeds/json', 'HomeController\HomeController@jsonPost')->name('json.feed');
 
 Route::group(['prefix' => 'auth'], function () {
     Auth::routes();

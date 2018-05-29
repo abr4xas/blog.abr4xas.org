@@ -7,6 +7,7 @@ use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Builder;
 
 class Posts extends Model
 {
@@ -27,6 +28,12 @@ class Posts extends Model
         'active',
         'slug'
     ];
+
+
+    public function scopePublished(Builder $query)
+    {
+        $query->where('active', true);
+    }
 
     public function user()
     {
