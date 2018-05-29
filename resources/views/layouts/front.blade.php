@@ -80,6 +80,7 @@
     <link rel="stylesheet" href="{{ asset('/css/owl.theme.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
     @if(env('APP_ENV') === 'production')
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105837438-1"></script>
     <script>
