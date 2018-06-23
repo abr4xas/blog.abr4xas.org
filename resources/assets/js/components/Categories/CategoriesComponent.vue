@@ -9,7 +9,7 @@
                 :key="category.id" 
                 :class="category.color">
                     <a 
-                    :href="'/categories/' + category.name">
+                    :href="'/category/' + category.name">
                         {{ category.name }}
                     </a>
                 </li>

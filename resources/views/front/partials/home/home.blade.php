@@ -29,7 +29,7 @@ Home
             </div>
             <div class="aside-blocks col-lg-4 col-xs-12">
                 {{-- @include('front.partials.author.author')  --}}
-                <categories></categories>
+                @include('front.partials.categories.categories')
                 @include('front.partials.advertisement.advertisement')
                 {{-- @include('front.partials.last-project.last-project')  --}}
                 {{-- @include('front.partials.tags.tags') --}}
