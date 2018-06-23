@@ -111,16 +111,6 @@
                             <img src="{{ asset('/icons/android-icon-36x36.png') }}" alt="abr4xas.org Logo" data-rjs="2">
                         </a>
                     </div>
-                    {{--
-                    <div class="header-top-text">
-                        <p>
-                            <span class="font-italic">"Modern Javascript"</span>
-                            book is available!
-                            <a href="shop.html" title="Modern Javascript Book">Check out
-                                <i class="pe-7s-angle-right"></i>
-                            </a>
-                        </p>
-                    </div> --}}
                     <nav class="header-top-nav">
                         <ul>
                             <li>
@@ -145,28 +135,32 @@
                         <li class="dropdown">
                             <a href="#0" class="dropdown-toggle" title="Blog articles">Blog articles</a>
                             <ul class="dropdown-menu">
-
-                                @foreach ($categories as $item) @if ($loop->iteration == 1)
-                                <li class="nav-elipse-blue">
-                                    @endif @if ($loop->iteration == 2)
+                                @foreach ($categories as $item) 
+                                    @if ($loop->iteration == 1)
+                                    <li class="nav-elipse-blue">
+                                    @endif 
+                                    @if ($loop->iteration == 2)
                                     <li class="nav-elipse-red">
-                                        @endif @if ($loop->iteration == 3)
-                                        <li class="nav-elipse-yellow">
-                                            @endif @if ($loop->iteration == 4)
-                                            <li class="nav-elipse-green">
-                                                @endif @if ($loop->iteration == 5)
-                                                <li>
-                                                    @endif
-                                                    <a href="{{ route('category.show', $item->slug) }}" title="Cosas que se sobre {{ $item->name }}">
-                                                        {{ $item->name }}
-                                                    </a>
-                                                </li>
-                                                @endforeach
+                                    @endif 
+                                    @if ($loop->iteration == 3)
+                                    <li class="nav-elipse-yellow">
+                                    @endif 
+                                    @if ($loop->iteration == 4)
+                                    <li class="nav-elipse-green">
+                                    @endif 
+                                    @if ($loop->iteration == 5)
+                                    <li>
+                                    @endif
+                                    <a href="{{ route('category.show', $item->slug) }}" title="Cosas que se sobre {{ $item->name }}">
+                                        {{ $item->name }}
+                                    </a>
+                                    </li>
+                                @endforeach
                             </ul>
-                            </li>
-                            <li>
-                                <a href="{{ route('about') }}" title="Sobre el Blog">Sobre el Blog</a>
-                            </li>
+                        </li>
+                        <li>
+                            <a href="{{ route('about') }}" title="Sobre el Blog">Sobre el Blog</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -182,7 +176,7 @@
         </div>
     </div>
 </nav>
-@yield('content')
+    @yield('content')
 <footer>
     <div class="container">
         <div class="row">
@@ -190,17 +184,17 @@
                 <div class="copyright">
                     <ul class="pull-righ">
                         <li>
-                            <a href="#0" title="Twitter">
+                            <a href="https://twitter.com/abr4xas" target="_blank" title="Twitter">
                                 <i class="icon-social_twitter_circle"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#0" title="Github">
+                            <a href="https://github.com/abr4xas" target="_blank" title="Github">
                                 <i class="icon-social_github_circle"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#0" title="LinkedIn">
+                            <a href="https://www.linkedin.com/in/ancrz/" target="_blank" title="LinkedIn">
                                 <i class="icon-social_linkedin_circle"></i>
                             </a>
                         </li>

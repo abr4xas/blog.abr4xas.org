@@ -17,6 +17,8 @@ Route::get('acerca-de-este-blog', function () {
     return view('front.partials.about.about');
 })->name('about');
 
+Route::get('/categories', 'HomeController\HomeController@getCategories')->name('main');
+
 Route::get('/category/{category}', [
     'only' => ['show'],
     'uses' => 'HomeController\CategoryController@show'

@@ -13,17 +13,38 @@ class CategoryTableSeeder extends Seeder
     public function run()
     {
         $categories = [
-            'php',
-            'laravel',
-            'vue',
-            'linux',
-            'uncategorized'
+            [
+                'name' => 'php',
+                'slug' => 'php',
+                'color' => 'nav-elipse-blue'
+            ],
+            [
+                'name' => 'laravel',
+                'slug' => 'laravel',
+                'color' => 'nav-elipse-red'
+            ],
+            [
+                'name' => 'vue',
+                'slug' => 'vue',
+                'color' => 'nav-elipse-yellow'
+            ],
+            [
+                'name' => 'linux',
+                'slug' => 'linux',
+                'color' => 'nav-elipse-green'
+            ],
+            [
+                'name' => 'sin categoria',
+                'slug' => 'uncategorized',
+                'color' => ''
+            ],
         ];
         
         foreach ($categories as $key) {
             Category::create([
-                'name' => $key,
-                'slug' => $key
+                'name' => $key['name'],
+                'slug' => $key['slug'],
+                'color' => $key['color']
             ]);
         }
     }

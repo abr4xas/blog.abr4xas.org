@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\HomeController;
 
 use App\Models\Posts;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -94,7 +95,7 @@ class HomeController extends Controller
             ],
             'items'         => [],
         ];
-    
+
         foreach ($posts as $key => $post) {
             $data['items'][$key] = [
                 'title'         => $post->title,
@@ -109,6 +110,16 @@ class HomeController extends Controller
             ];
         }
         return $data;
-    }    
+    }
+
+    public function getCategories()
+    {
+        $categories = Category::get();
+
+        $data = [
+            'categories' => $categories
+        ];
+        return response()->json($data);
+    }
 
 }

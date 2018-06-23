@@ -20,6 +20,7 @@ class Category extends Model
         'name',
         'locale',
         'slug',
+        'color',
     ];
 
     public function post()
