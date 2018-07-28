@@ -101,111 +101,93 @@
 </head>
 
 @stack('body')
-<header class="navbar-fixed-top">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="header-top">
-                    <div class="header-top-logo">
-                        <a href="/">
-                            <img src="{{ asset('/icons/android-icon-36x36.png') }}" alt="abr4xas.org Logo" data-rjs="2">
-                        </a>
+<div id="app">
+    <header class="navbar-fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header-top">
+                        <div class="header-top-logo">
+                            <a href="/">
+                                <img src="{{ asset('/icons/android-icon-36x36.png') }}" alt="abr4xas.org Logo" data-rjs="2">
+                            </a>
+                        </div>
+                        <nav class="header-top-nav">
+                            <ul>
+                                <li>
+                                    <a href="#0" class="light-link" title="Menu">
+                                        <div id="menu-animate-icon" class="header-top-nav-menu-icon">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
-                    <nav class="header-top-nav">
+                </div>
+                <div class="col-lg-12">
+                    <nav class="header-nav">
                         <ul>
+                            <li class="active">
+                                <a href="/" title="Start page">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#0" class="dropdown-toggle" title="Blog articles">Blog articles</a>
+                                <ul class="dropdown-menu text-uppercase">                                    
+                                    <categories></categories>
+                                </ul>
+                            </li>
                             <li>
-                                <a href="#0" class="light-link" title="Menu">
-                                    <div id="menu-animate-icon" class="header-top-nav-menu-icon">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </a>
+                                <a href="{{ route('about') }}" title="Sobre el Blog">Sobre el Blog</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
             </div>
-            <div class="col-lg-12">
-                <nav class="header-nav">
-                    <ul>
-                        <li class="active">
-                            <a href="/" title="Start page">Home</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#0" class="dropdown-toggle" title="Blog articles">Blog articles</a>
-                            <ul class="dropdown-menu">
-                                @foreach ($categories as $item) 
-                                    @if ($loop->iteration == 1)
-                                    <li class="nav-elipse-blue">
-                                    @endif 
-                                    @if ($loop->iteration == 2)
-                                    <li class="nav-elipse-red">
-                                    @endif 
-                                    @if ($loop->iteration == 3)
-                                    <li class="nav-elipse-yellow">
-                                    @endif 
-                                    @if ($loop->iteration == 4)
-                                    <li class="nav-elipse-green">
-                                    @endif 
-                                    @if ($loop->iteration == 5)
-                                    <li>
-                                    @endif
-                                    <a href="{{ route('category.show', $item->slug) }}" title="Cosas que se sobre {{ $item->name }}">
-                                        {{ $item->name }}
-                                    </a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="{{ route('about') }}" title="Sobre el Blog">Sobre el Blog</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
         </div>
-    </div>
-</header>
-<nav class="mobile-nav header-nav">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <!-- Auto Copy Header Navigation -->
-            </div>
-        </div>
-    </div>
-</nav>
-    @yield('content')
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="copyright">
-                    <ul class="pull-righ">
-                        <li>
-                            <a href="https://twitter.com/abr4xas" target="_blank" title="Twitter">
-                                <i class="icon-social_twitter_circle"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/abr4xas" target="_blank" title="Github">
-                                <i class="icon-social_github_circle"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/ancrz/" target="_blank" title="LinkedIn">
-                                <i class="icon-social_linkedin_circle"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="font-primary pull-left">&copy; Theme by
-                        <a href="#0" title="" class="black">Komon.ski</a> . All Rights Reserved.</p>
+    </header>
+    <nav class="mobile-nav header-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Auto Copy Header Navigation -->
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </nav>
+        @yield('content')
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright">
+                        <ul class="pull-righ">
+                            <li>
+                                <a href="https://twitter.com/abr4xas" target="_blank" title="Twitter">
+                                    <i class="icon-social_twitter_circle"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/abr4xas" target="_blank" title="Github">
+                                    <i class="icon-social_github_circle"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/ancrz/" target="_blank" title="LinkedIn">
+                                    <i class="icon-social_linkedin_circle"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="font-primary pull-left">&copy; Theme by
+                            <a href="#0" title="" class="black">Komon.ski</a> . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
 <script src="{{ asset('/js/app.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/js/retina.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/js/owl.carousel.min.js') }}"></script>
