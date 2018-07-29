@@ -21,7 +21,7 @@
         <amp-img src="{{$post->image}}" width="710" height="210" layout="responsive" alt="" class="mb4 mx3"></amp-img>
     </header>
     <p class="mb4 px3">
-        {{ $post->content }}
+        @markdown($post->content)
     </p>
 </article>
 @endsection
