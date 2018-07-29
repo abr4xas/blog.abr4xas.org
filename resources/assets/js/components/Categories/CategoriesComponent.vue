@@ -1,8 +1,8 @@
 <template>
     <span>
         <li v-for="category in categories" :key="category.id" :class="category.color">
-            <a :href="'/category/' + category.name">
-                {{ category.slug }}
+            <a :href="'/category/' + category.slug">
+                {{ category.name }}
             </a>
         </li>
     </span>
