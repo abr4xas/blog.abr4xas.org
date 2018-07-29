@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@stack('title')</title>
     <meta name="HandheldFriendly" content="True" />
     <link rel="dns-prefetch" href="{{ route('main') }}" />
@@ -75,8 +75,7 @@
     <link rel="stylesheet" href="{{ asset('/css/Pe-icon-7-stroke.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/social-icons.css') }}">
-    {{-- <link rel="stylesheet" href="{{ asset('/css/owl.carousel.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/owl.theme.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('/shards/css/shards.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
     @if(env('APP_ENV') === 'production')
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -95,9 +94,21 @@
             enable_page_level_ads: true
         });
 
-    </script>
+    </script>      
     @endif
-    <style>.articles img {margin: 0 auto;max-width:100%;height:auto;display:block;}</style>
+    <style>.articles img {margin: 0 auto;max-width:100%;height:auto;display:block;}.card-img-overlay {background: transparent;}.banners .banner-wrapper {
+            position: relative;
+            background: transparent;
+            padding: 0;
+            margin-bottom: 20px;
+        }.card-img-top {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }.articles article {
+    border-radius: .625rem;
+}.articles-footer {
+    padding: 0;
+}</style>
 </head>
 
 @stack('body')
@@ -189,10 +200,14 @@
     </footer>
 </div>
 <script src="{{ asset('/js/app.js') }}"></script>
+{{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> --}}
 <script type="text/javascript" src="{{ asset('/js/retina.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/js/owl.carousel.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/js/webfont.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/js/scripts.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/shards/js/shards.min.js') }}"></script>
 @stack('scripts')
 </body>
 

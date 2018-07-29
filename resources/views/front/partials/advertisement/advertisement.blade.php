@@ -1,3 +1,2 @@
-<aside class="advertisement">
-    @include('front.partials.adsense.adsense')
-</aside>
+<br>
+@include('front.partials.adsense.adsense')

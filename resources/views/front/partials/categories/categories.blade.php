@@ -1,6 +1,10 @@
 <aside class="categories">
-    <h2 class="aside-title">Categories</h2>
-    <ul class="text-uppercase">
-        <categories></categories>
-    </ul>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Categories</h4>
+            <ul class="text-uppercase">
+                <categories></categories>
+            </ul>
+        </div>
+    </div>
 </aside>

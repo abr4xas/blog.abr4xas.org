@@ -39,28 +39,7 @@
                                     @include('front.partials.adsense.adsense')
                                 </div>
                             </div>
-                        </div>
-                        {{-- <div class="col-lg-2 col-xs-12">
-                            <div class="articles-blog-post-share">
-                                <h3>Share this</h3>
-                                <div>
-                                    <ul>
-                                        <li>
-                                            <a href="#" title="Facebook">
-                                                <i class="fa fa-facebook"></i>Facebook</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" title="Twitter">
-                                                <i class="fa fa-twitter"></i>Twitter</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" title="Google+">
-                                                <i class="fa fa-google-plus"></i>Google+</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div> --}}
+                        </div> 
                     </div>
                 </div>
             </article>
@@ -70,38 +49,22 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 col-xs-12">
-                            {{-- <div class="articles-footer">
-                                <ul class="articles-footer-info">
-                                    <li>
-                                        <a title="" href="#" class="light-link">
-                                            <i class="pe-7s-comment"></i> 7 Response</a>
-                                    </li>
-                                    <li>
-                                        <a title="" href="#" class="light-link">
-                                            <i class="pe-7s-like"></i> 1221</a>
-                                    </li>
-                                </ul>
-                                <button class="btn btn-light-blue">
-                                    <a title="Write a response" href="#">Write a response</a>
-                                </button>
-                            </div> --}}
-
                             <div class="articles-author">
-                                <img src="img/profile-picture.png" alt="" data-rjs="2">
+                                <img src="https://secure.gravatar.com/avatar/b5a93f6390e4bdb85a484d15b549d467?s=75&d=mm&r=g" class="rounded-circle" alt="" data-rjs="2">
                                 <div class="articles-author-right">
-                                    <h4>{{ $post->user->name }}</h4>
-                                    {{-- <div class="social">
-                                        <a href="" title="Twitter">
+                                    <div class="social">
+                                        <a href="https://twitter.com/abr4xas" target="_blank" title="Twitter">
                                             <i class="icon-social_twitter_circle"></i>
                                         </a>
-                                        <a href="" title="Github">
+                                        <a href="https://github.com/abr4xas" target="_blank" title="Github">
                                             <i class="icon-social_github_circle"></i>
                                         </a>
-                                        <a href="" title="LinkedIn">
+                                        <a href="https://www.linkedin.com/in/ancrz/" target="_blank" title="LinkedIn">
                                             <i class="icon-social_linkedin_circle"></i>
                                         </a>
-                                    </div> --}}
-                                    <p>Compassionate entrepreneur on a mission to end homelessness. #jshomes Javascript, tech education, electronic music, photography, film, viral apps.</p>
+                                    </div>
+                                    <p>I'm Angel, a middle-aged handsome (some times frontend) backend developer.</p>
+                                    <p><br></p>
                                 </div>
                             </div>
                         </div>
