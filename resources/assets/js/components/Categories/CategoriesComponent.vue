@@ -2,7 +2,7 @@
     <span>
         <li v-for="category in categories" :key="category.id" :class="category.color">
             <a :href="'/category/' + category.name">
-                {{ category.name }}
+                {{ category.slug }}
             </a>
         </li>
     </span>
