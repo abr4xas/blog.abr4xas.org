@@ -9,6 +9,9 @@ Home
 @if ($current == 'main')
     @include('front.partials.banner_post.banner_post')
 @endif
+@push('meta')
+<link rel="amphtml" href="{{ route('main') }}/amp">
+@endpush
 <main>
     <div class="container">
         <div class="row">

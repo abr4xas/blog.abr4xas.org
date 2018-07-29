@@ -5,6 +5,7 @@
 @endpush
 @push('meta')
     @include('front.partials.meta.meta-article')
+    <link rel="amphtml" href="{{ route('main') }}/amp/{{ $post->slug }}">
 @endpush
 @push('body')
 <body class="body-blog-post">

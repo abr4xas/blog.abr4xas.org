@@ -48,7 +48,7 @@
                     <a href="{{ url('/category/uncategorized') }}" title="sin categoría">
                         <img class="card-img-top" src="{{ asset('/img/photo5.jpg') }}" alt="uncategorized">
                         <div class="card-img-overlay">
-                            <h4 class="card-title h2">Todo lo que se sobre Linux</h4>
+                            <h4 class="card-title h2">Todo lo que se sobre otras cosas</h4>
                         </div>
                     </a>
                 </div>

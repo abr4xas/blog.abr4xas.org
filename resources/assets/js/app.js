@@ -25,6 +25,10 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 Vue.component('categories', require('./components/Categories/CategoriesComponent.vue'));
 Vue.component('spinner', require('vue-spinner-component/src/Spinner.vue'));
 
+Vue.component('pagination', require('./components/pagination/PaginationComponent.vue'));
+
+Vue.component('home', require('./components/amp/home/HomeComponent.vue'));
+
 const app = new Vue({
     el: '#app'
 });

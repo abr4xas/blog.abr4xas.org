@@ -75,8 +75,12 @@ class Posts extends Model
     {
         return [
             'title'         => $this->title,
+            'image'         => $this->image,
             'description'   => $this->description,
-            'slug'          => $this->slug
+            'slug'          => $this->slug,
+            'category'      => $this->category->name,
+            'custom_date'   => Carbon::parse($this->created_at)->format('F d,Y'),
+            'datetime'      => Carbon::parse($this->created_at)->format('Y-m-d'),
         ];
     }
 }
