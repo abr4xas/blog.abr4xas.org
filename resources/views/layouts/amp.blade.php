@@ -22,15 +22,15 @@
     <meta name="robots" content="index,follow">
     <meta name="google" content="notranslate">
     <meta property="og:locale" content="{{ app()->getLocale() }}">
-    <meta name="twitter:creator" content="@abr4xas"> @stack('meta')
+    <meta name="twitter:creator" content="@abr4xas"> 
+    @stack('meta')
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="El Blog de Abr4xas" />
     <meta name="msapplication-starturl" content="{{ route('main') }}" />
     <meta name="msapplication-tooltip" content="# nano /var/log/life.log" />
     <meta name="msapplication-window" content="width=1024;height=768" />
-    <meta name="msapplication-task" content="name=El Blog de Abr4xas;action-uri={{ route('main') }};icon-uri={{ asset('/icons/favicon.ico') }}"
-    />
+    <meta name="msapplication-task" content="name=El Blog de Abr4xas;action-uri={{ route('main') }};icon-uri={{ asset('/icons/favicon.ico') }}"/>
     <meta name="msapplication-TileColor" content="#1F1F21" />
     <meta name="application-name" content="El Blog de Abr4xas">
     <meta name="HandheldFriendly" content="True">
