@@ -12,6 +12,6 @@ class BlogPostSeeder extends Seeder
      */
     public function run()
     {
-        factory(Posts::class, 40)->create();
+        factory(Posts::class, 500)->create();
     }
 }

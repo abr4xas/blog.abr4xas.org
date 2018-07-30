@@ -11,7 +11,6 @@
                         {{ post.custom_date }}
                     </time>
                 </address>
-                <amp-img v-if="post.image" :src="post.image" width="710" height="210" layout="responsive" alt="" class="mb4 mx3"></amp-img>
             </header>
             <div class="mb4 px3">
                 <div v-html="post.description"></div>
