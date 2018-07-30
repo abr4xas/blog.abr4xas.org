@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <title>@stack('title')</title>
-    <link rel="canonical" href="https://www.ampstart.com/templates/blog.amp">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
