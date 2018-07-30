@@ -4,7 +4,6 @@
 @endpush
 @push('meta')
     @include('front.partials.meta.meta-article')
-    <link rel="canonical" href="{{ route('posts.show', $post->slug) }}">
 @endpush
 @section('content')
 <article class="recipe-article">
