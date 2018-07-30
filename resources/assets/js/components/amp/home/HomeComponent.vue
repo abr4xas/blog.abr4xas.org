@@ -11,13 +11,13 @@
                         {{ post.custom_date }}
                     </time>
                 </address>
-                <amp-img :src="post.image" width="710" height="210" layout="responsive" alt="" class="mb4 mx3"></amp-img>
+                <amp-img v-if="post.image" :src="post.image" width="710" height="210" layout="responsive" alt="" class="mb4 mx3"></amp-img>
             </header>
-            <p class="mb4 px3">
-                {{ post.description }}
+            <div class="mb4 px3">
+                <div v-html="post.description"></div>
                 <br>
                 <a :href="/amp/+ post.slug">Leer completo</a>
-            </p>
+            </div>
             <p></p>
         </article>
         <div class="custom-pagination">

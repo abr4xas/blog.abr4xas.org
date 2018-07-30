@@ -19,8 +19,8 @@
         </address>
         <amp-img src="{{$post->image}}" width="710" height="210" layout="responsive" alt="" class="mb4 mx3"></amp-img>
     </header>
-    <p class="mb4 px3">
+    <div class="mb4 px3">
         @markdown($post->content)
-    </p>
+    </div>
 </article>
 @endsection
