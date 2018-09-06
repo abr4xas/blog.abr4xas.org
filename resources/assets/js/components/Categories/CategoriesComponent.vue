@@ -16,9 +16,7 @@
                 required: true
             }
         },
-        mounted() {
-            console.log(this.categories)
-        },
+        mounted() {},
         data() {
             return {
 
