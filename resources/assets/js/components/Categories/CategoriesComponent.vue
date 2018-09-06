@@ -9,24 +9,22 @@
 </template>
 
 <script>
-    import axios from 'axios';
-
     export default {
+        props: {
+            categories: {
+                type: Array,
+                required: true
+            }
+        },
         mounted() {
-            axios.get('/categories')
-                .then((respuesta) => {
-                    this.categories = respuesta.data.categories
-                    this.status = false
-                    this.show = true
-                })
+            console.log(this.categories)
         },
         data() {
             return {
-                categories: [],
-                status: true,
-                show: false
+
             }
         },
+        methods: {}
     }
 
 </script>

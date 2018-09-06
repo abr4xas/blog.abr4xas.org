@@ -3,7 +3,7 @@
         <div class="card-body">
             <h4 class="card-title">Categories</h4>
             <ul class="text-uppercase">
-                <categories></categories>
+                <categories :categories="{{ $categories }}"></categories>
             </ul>
         </div>
     </div>

@@ -17,7 +17,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts = Posts::published()->latest()->simplePaginate(4);
+        $posts = Posts::published()->latest()->paginate(4);
 
         return view('front.partials.home.home', compact('posts'));
     }
@@ -110,16 +110,6 @@ class HomeController extends Controller
             ];
         }
         return $data;
-    }
-
-    public function getCategories()
-    {
-        $categories = Category::get();
-
-        $data = [
-            'categories' => $categories
-        ];
-        return response()->json($data);
     }
 
 }

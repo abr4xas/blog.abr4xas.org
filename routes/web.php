@@ -17,8 +17,6 @@ Route::get('acerca-de-este-blog', function () {
     return view('front.partials.about.about');
 })->name('about');
 
-Route::get('/categories', 'HomeController\HomeController@getCategories')->name('categories');
-
 Route::get('/category/{category}', [
     'only' => ['show'],
     'uses' => 'HomeController\CategoryController@show'
@@ -47,4 +45,3 @@ Route::get('/p/sitemap', 'HomeController\HomeController@sitemap');
 Route::group(['prefix' => 'auth'], function () {
     Auth::routes();
 });
-
